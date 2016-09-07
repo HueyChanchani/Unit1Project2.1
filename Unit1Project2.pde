@@ -1,27 +1,27 @@
 //characteristics of Lil Yachty
 PImage LilBoat;
-float LilBoatPositionX = 50;
-float LilBoatPositionY = 50;
-int   LilBoatHeight = 930;
-int   LilBoatWidth = 803;
+float LilBoatX = 50;
+float LilBoatY = 50;
+int   LilBoatHeight = 100;
+int   LilBoatWidth = 100;
 
 //characteristics of "HATER"
 PImage HATER;
-float HATERPositionX = 80;
-float HATERPositionY = 80;
-int HATERHeight = 288;
-int HATERWidth = 288;
+float HATERX = width/2;
+float HATERY = height/2;
+int HATERHeight = 25;
+int HATERWidth = 25 ;
 
 void setup()
 {
   background(0);
-  fullScreen();
+  size(1000,1000);
   LilBoat = loadImage("lilboat.png");
   HATER = loadImage("hater.jpg");
 }
 
 void draw()
 {
-  image(LilBoat, 0, height/2);
-  image(HATER, 0, 0);
+  image(LilBoat, height/2, width/2, LilBoatHeight, LilBoatWidth);
+  image(HATER, height/2, width/2, HATERHeight, HATERWidth);
 }
