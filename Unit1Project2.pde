@@ -14,14 +14,29 @@ int HATERWidth = 25 ;
 
 void setup()
 {
+  frameRate(30);
   background(0);
-  size(1000,1000);
+  fullScreen();
   LilBoat = loadImage("lilboat.png");
   HATER = loadImage("hater.jpg");
+  
 }
 
 void draw()
 {
-  image(LilBoat, height/2, width/2, LilBoatHeight, LilBoatWidth);
-  image(HATER, height/2, width/2, HATERHeight, HATERWidth);
+  background(0);
+  image(LilBoat, LilBoatX, LilBoatY, LilBoatHeight, LilBoatWidth);
+  image(HATER, HATERX, HATERY, HATERHeight, HATERWidth);
+  LilBoatX = LilBoatX + 100;
+  LilBoatY = LilBoatY +100;
+  if (LilBoatX > width)
+  {
+   LilBoatX = 0 ;
+  }
+  if (LilBoatY > height)
+  {
+   LilBoatY = 10; 
+  }
+  HATERX = HATERX +10;
+  HATERY = HATERY-10;
 }
